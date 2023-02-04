@@ -2,12 +2,8 @@ import Login from "@/components/Login";
 import Signup from "@/components/Signup";
 import Nav from "@/components/Nav";
 import Profile from "@/components/Profile";
-import JobList from "@/components/JobList";
+import AddQuestion from "@/components/AddQuestion";
 
 export default function Home() {
-  return (
-    <div>
-      <Profile />
-    </div>
-  );
+  return <AddQuestion />;
 }
