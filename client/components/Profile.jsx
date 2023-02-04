@@ -1,14 +1,18 @@
-import { TextField, Button, Grid, Typography, Container } from "@mui/material";
+import { Grid, Typography, TextField, Button } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const sx100Width = {
   width: "100%",
 };
 
-const Signup = () => {
+const Profile = () => {
   return (
     <Grid container spacing={2} direction="column" alignItems="center">
       <Grid item>
-        <Typography variant="h4">Signup</Typography>
+        <Typography variant="h4">Profile</Typography>
+      </Grid>
+      <Grid item>
+        <AccountCircleIcon sx={{ fontSize: 150, color: "primary.main" }} />
       </Grid>
       <Grid item sx={sx100Width}>
         <TextField label="Name" variant="outlined" sx={sx100Width} />
@@ -22,18 +26,18 @@ const Signup = () => {
           }}
         />
       </Grid>
-      <Grid item sx={sx100Width}>
-        <TextField
-          label="Password"
-          variant="outlined"
-          sx={{
-            width: "100%",
-          }}
-        />
+      <Grid item>
+        <Typography variant="h6">number of saved jobs</Typography>
+      </Grid>
+      <Grid item>
+        <Typography variant="h6">list of all interests</Typography>
+      </Grid>
+      <Grid item>
+        <Typography variant="h6">keywords from resume</Typography>
       </Grid>
       <Grid item sx={sx100Width}>
         <Button
-          variant="outlined"
+          variant="contained"
           component="label"
           sx={{
             width: "100%",
@@ -45,7 +49,7 @@ const Signup = () => {
       </Grid>
       <Grid item sx={sx100Width}>
         <Button
-          variant="outlined"
+          variant="contained"
           component="label"
           sx={{
             width: "100%",
@@ -57,16 +61,16 @@ const Signup = () => {
       </Grid>
       <Grid item sx={sx100Width}>
         <Button
-          variant="contained"
+          variant="outlined"
           sx={{
             width: "100%",
           }}
         >
-          Signup
+          Edit
         </Button>
       </Grid>
     </Grid>
   );
 };
 
-export default Signup;
+export default Profile;
