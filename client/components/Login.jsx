@@ -11,7 +11,7 @@ const Login = () => {
         <Typography variant="h4">Login</Typography>
       </Grid>
       <Grid item sx={sx100Width}>
-        <TextField label="Username" variant="outlined" sx={sx100Width} />
+        <TextField label="Email-Id" variant="outlined" sx={sx100Width} />
       </Grid>
       <Grid item sx={sx100Width}>
         <TextField label="Password" variant="outlined" sx={sx100Width} />

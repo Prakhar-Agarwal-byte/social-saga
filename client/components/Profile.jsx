@@ -27,25 +27,7 @@ const Profile = () => {
         />
       </Grid>
       <Grid item>
-        <Typography variant="h6">number of saved jobs</Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="h6">list of all interests</Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="h6">keywords from resume</Typography>
-      </Grid>
-      <Grid item sx={sx100Width}>
-        <Button
-          variant="contained"
-          component="label"
-          sx={{
-            width: "100%",
-          }}
-        >
-          Upload resume
-          <input hidden accept="application/pdf" multiple type="file" />
-        </Button>
+        <Typography variant="h6">number of questions answered</Typography>
       </Grid>
       <Grid item sx={sx100Width}>
         <Button

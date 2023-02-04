@@ -39,18 +39,6 @@ const Signup = () => {
             width: "100%",
           }}
         >
-          Upload resume
-          <input hidden accept="application/pdf" multiple type="file" />
-        </Button>
-      </Grid>
-      <Grid item sx={sx100Width}>
-        <Button
-          variant="outlined"
-          component="label"
-          sx={{
-            width: "100%",
-          }}
-        >
           Upload profile picture
           <input hidden accept="image/*" multiple type="file" />
         </Button>
