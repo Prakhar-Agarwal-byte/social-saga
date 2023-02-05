@@ -1,10 +1,10 @@
-import Login from "@/components/Login";
-import Signup from "@/components/Signup";
+import Feed from "@/components/Feed";
 import Nav from "@/components/Nav";
-import Profile from "@/components/Profile";
-import AddQuestion from "@/components/AddQuestion";
-import Question from "@/components/Question";
 
 export default function Home() {
-  return <Question />;
+  return (
+    <div>
+      <Feed />
+    </div>
+  );
 }

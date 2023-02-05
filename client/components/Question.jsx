@@ -5,6 +5,7 @@ import {
   Chip,
   IconButton,
   Typography,
+  Card,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -12,52 +13,42 @@ const sx100Width = {
   width: "100%",
 };
 
-const chipData = [
-  { key: 0, label: "Angular" },
-  { key: 1, label: "jQuery" },
-  { key: 2, label: "Polymer" },
-  { key: 3, label: "React" },
-  { key: 4, label: "Vue.js" },
-  { key: 0, label: "Angular" },
-  { key: 1, label: "jQuery" },
-  { key: 2, label: "Polymer" },
-];
-
-const Question = ({}) => {
+const Question = ({ question }) => {
   return (
-    //TODO: Add Card
-    <Grid container spacing={2} direction="column" alignItems="center">
-      <Grid item sx={sx100Width}>
-        <Image
-          src="https://picsum.photos/200/300"
-          alt="Picture for question"
-          height={200}
-          width={300}
-          sx={{}}
-        />
-      </Grid>
-      <Grid item sx={sx100Width}>
-        <Typography variant="h4">Question Description</Typography>
-      </Grid>
+    <Card raised sx={{ padding: "1rem" }}>
+      <Grid container spacing={2} direction="column">
+        {question.url && (
+          <Grid item>
+            <Image
+              src={question.url}
+              alt="Picture for question"
+              height={300}
+              width={400}
+            />
+          </Grid>
+        )}
+        <Grid item>
+          <Typography variant="h4">{question.description}</Typography>
+        </Grid>
 
-      <Grid item sx={sx100Width}>
-        <Typography variant="h6">Tags</Typography>
-        <Grid container spacing={2} direction="row" alignItems="center">
-          {chipData.map((data) => {
-            return (
-              <Grid item>
-                <Chip
-                  label={data.label}
-                  onDelete={() => {
-                    console.log("delete", data.label);
-                  }}
-                />
-              </Grid>
-            );
-          })}
+        <Grid item>
+          <Grid container spacing={0.25} direction="row">
+            {question.tags.map((data, idx) => {
+              return (
+                <Grid item key={idx}>
+                  <Chip
+                    label={data}
+                    onDelete={() => {
+                      console.log("delete", data);
+                    }}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </Card>
   );
 };
 
